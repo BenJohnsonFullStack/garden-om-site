@@ -1,6 +1,6 @@
-// import {} from
+function Nav(props) {
+  const { active, isActive } = props;
 
-function Nav() {
   return (
     <div className="nav-screen">
       <div className="nav-bar"></div>
