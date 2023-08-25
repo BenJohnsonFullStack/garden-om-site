@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 87.34 19.43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #edece8;
+        font-family: MADESunflower, 'MADE Sunflower';
+        font-size: 16px;
+      }
+
+      .cls-2 {
+        fill: #d4acd4;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        opacity: .6;
+      }
+
+      .cls-5, .cls-4 {
+        fill: #ead5ea;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="14.18" y1="8.97" x2="1.63" y2="8.97" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff33b"/>
+      <stop offset=".04" stop-color="#fee62d"/>
+      <stop offset=".12" stop-color="#fdd51b"/>
+      <stop offset=".2" stop-color="#fdca0f"/>
+      <stop offset=".28" stop-color="#fdc70c"/>
+      <stop offset=".67" stop-color="#f3903f"/>
+      <stop offset=".89" stop-color="#ed683c"/>
+      <stop offset="1" stop-color="#e93e3a"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-5" d="m12.25,8.55c.9,3.35-1.09,6.79-4.44,7.69-3.35.9-6.79-1.09-7.69-4.44C-.78,8.46,3.6.55,3.6.55c0,0,7.74,4.65,8.64,8Z"/>
+    <path class="cls-2" d="m14.08,9.97c0,3.47-2.81,6.28-6.28,6.28S1.53,13.43,1.53,9.97,7.81,0,7.81,0c0,0,6.28,6.5,6.28,9.97Z"/>
+    <path class="cls-4" d="m15.49,11.8c-.9,3.35-4.34,5.34-7.69,4.44-3.35-.9-5.34-4.34-4.44-7.69S12.01.55,12.01.55c0,0,4.38,7.9,3.48,11.25Z"/>
+    <path class="cls-3" d="m14.18,10.82c0,3.47-2.81,6.28-6.28,6.28S1.63,14.28,1.63,10.82,7.91.85,7.91.85c0,0,6.28,6.5,6.28,9.97Z"/>
+    <text class="cls-1" transform="translate(19.53 13.68)"><tspan x="0" y="0">ABEL</tspan><tspan class="cls-6" x="44.86" y="0">L</tspan><tspan x="55.46" y="0">A</tspan></text>
+  </g>
+</svg>
