@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faX } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 function Nav(props) {
@@ -8,7 +6,6 @@ function Nav(props) {
   return (
     <div className="nav-wrapper">
       <div className="nav-bar">
-        <FontAwesomeIcon icon={faX} style={{ color: "#044418" }} />
         <div className="nav-links">
           <NavLink exact to="/book" activeClassName="active-link">
             Book

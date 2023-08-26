@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header-wrapper">
-      <Link to="/">
+      <Link exact to="/">
         <svg
           id="Layer_2"
           data-name="Layer 2"
@@ -42,7 +42,6 @@ function Header() {
           </g>
         </svg>
       </Link>
-
       <Menu />
     </div>
   );
