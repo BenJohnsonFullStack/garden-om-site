@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Nav(props) {
   const { active, isActive } = props;
@@ -7,21 +7,21 @@ function Nav(props) {
     <div className="nav-wrapper">
       <div className="nav-bar">
         <div className="nav-links">
-          <NavLink exact to="/book" activeClassName="active-link">
+          <Link exact to="/book">
             Book
-          </NavLink>
-          <NavLink exact to="/pricing" activeClassName="active-link">
+          </Link>
+          <Link exact to="/pricing">
             Pricing
-          </NavLink>
-          <NavLink exact to="/blog" activeClassName="active-link">
+          </Link>
+          <Link exact to="/blog">
             Blog
-          </NavLink>
-          <NavLink exact to="/about" activeClassName="active-link">
+          </Link>
+          <Link exact to="/about">
             About Us
-          </NavLink>
-          <NavLink exact to="/contact" activeClassName="active-link">
+          </Link>
+          <Link exact to="/contact">
             Contact
-          </NavLink>
+          </Link>
         </div>
       </div>
       <div className="nav-scrim"></div>
