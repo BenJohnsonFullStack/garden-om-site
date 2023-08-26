@@ -1,26 +1,18 @@
+/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import Nav from "./Nav";
-import { useState } from "react";
 
-function Menu() {
-  const [active, setActive] = useState(true);
-
-  const isActive = () => {
-    setActive(!active);
-  };
-
-  console.log(active);
+function Menu(props) {
+  const { isActive, menuActive } = props;
 
   return (
     <>
       <FontAwesomeIcon
-        icon={!active ? faBars : faX}
+        icon={!menuActive ? faBars : faX}
         onClick={isActive}
-        style={{ color: "#044418" }}
+        style={{ color: "#044418", marginRight: "1em" }}
       />
-      <Nav active={active} isActive={isActive} />
     </>
   );
 }
