@@ -17,7 +17,7 @@ const flexStyle = {
 
 const socialLinkStyle = {
   color: "#edece8",
-  scale: "250%",
+  scale: "200%",
 };
 
 const h4Style = {
