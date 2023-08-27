@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0);
   background-color: #fffbf1;
 
   font-synthesis: none;
@@ -61,4 +61,12 @@ h1 {
   padding: 0.5rem;
   text-decoration: none;
   font-size: 1.5rem;
+}
+
+.abella {
+  width: 5rem;
+}
+
+.footer-wrapper {
+  background-color: #071902;
 }
