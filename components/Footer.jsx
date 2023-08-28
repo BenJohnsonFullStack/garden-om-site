@@ -7,69 +7,35 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-const flexStyle = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "#edece8",
-  textDecoration: "none",
-};
-
-const socialLinkStyle = {
-  color: "#edece8",
-  scale: "200%",
-};
-
-const h4Style = {
-  textAlign: "center",
-  color: "#dbb72a",
-  fontSize: "1.2rem",
-};
-
 function Footer() {
   return (
-    <footer className="footer-wrapper" style={{ backgroundColor: "#071902" }}>
+    <footer className="footer-wrapper">
       <div className="subscribe-wrapper">
-        <h4 style={h4Style}>Ready to Get Started?</h4>
-        <Link className="subscribe-link" style={flexStyle}>
-          <p>Subscribe to our newsletter</p>
-          <FontAwesomeIcon icon={faChevronRight} />
+        <h4>Ready to Get Started?</h4>
+        <Link className="subscribe-link">
+          <p className="subscribe">Subscribe to our newsletter</p>
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className="subscribe chevron"
+          />
         </Link>
       </div>
-      <div
-        className="social-wrapper"
-        style={{ maxWidth: "90%", margin: "0 auto" }}
-      >
-        <h4 style={h4Style}>Follow Us on Social Media</h4>
-        <div
-          className="social-links"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-          }}
-        >
+      <div className="social-wrapper">
+        <h4>Follow Us on Social Media</h4>
+        <div className="social-links">
           <Link>
-            <FontAwesomeIcon icon={faInstagram} style={socialLinkStyle} />
+            <FontAwesomeIcon icon={faInstagram} className="social-link" />
           </Link>
           <Link>
-            <FontAwesomeIcon icon={faSquareFacebook} style={socialLinkStyle} />
+            <FontAwesomeIcon icon={faSquareFacebook} className="social-link" />
           </Link>
         </div>
       </div>
-      <div
-        className="terms-wrapper"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <Link style={{ color: "#edece8" }}>Terms of Use</Link>
-        <Link style={{ color: "#edece8" }}>Privacy Policy</Link>
+      <div className="terms-wrapper">
+        <Link className="terms">Terms of Use</Link>
+        <Link className="terms">Privacy Policy</Link>
       </div>
-      <div className="copyright" style={flexStyle}>
+      <div className="copyright">
         <p>&copy; 2023 Garden Om</p>
         <AbellaLogo />
       </div>
@@ -78,10 +44,9 @@ function Footer() {
         onClick={() => {
           window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }}
-        style={flexStyle}
       >
-        <p>Back to Top</p>
-        <FontAwesomeIcon icon={faChevronUp} />
+        <p className="scroll">Back to Top</p>
+        <FontAwesomeIcon icon={faChevronUp} className="scroll chevron" />
       </div>
     </footer>
   );
