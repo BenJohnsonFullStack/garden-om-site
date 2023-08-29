@@ -1,7 +1,7 @@
 import BigLogo from "./BigLogo";
 import Footer from "./Footer";
 import Header from "./Header";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Home() {
   return (
@@ -37,6 +37,8 @@ function Home() {
             contact@gardenomyoga.com
           </Link>
         </address>
+        <BigLogo />
+        <BigLogo />
       </div>
       <Footer />
     </div>
