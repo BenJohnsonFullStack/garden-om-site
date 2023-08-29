@@ -37,8 +37,6 @@ function Home() {
             contact@gardenomyoga.com
           </Link>
         </address>
-        <BigLogo />
-        <BigLogo />
       </div>
       <Footer />
     </div>
