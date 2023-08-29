@@ -19,7 +19,7 @@ function Header() {
         </Link>
         <Menu isActive={isActive} menuActive={menuActive} />
       </header>
-      <Nav menuActive={menuActive} />
+      <Nav menuActive={menuActive} isActive={isActive} />
     </>
   );
 }

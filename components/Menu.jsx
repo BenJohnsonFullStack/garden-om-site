@@ -11,7 +11,7 @@ function Menu(props) {
       <FontAwesomeIcon
         icon={!menuActive ? faBars : faX}
         onClick={isActive}
-        style={{ color: "#044418", marginRight: "1em" }}
+        style={{ color: "#044418", marginRight: "1.5em" }}
       />
     </>
   );

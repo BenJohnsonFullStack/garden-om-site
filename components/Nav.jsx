@@ -2,30 +2,38 @@ import { Link } from "react-router-dom";
 
 function Nav(props) {
   // eslint-disable-next-line react/prop-types
-  const { menuActive } = props;
+  const { menuActive, isActive } = props;
+
+  const closeMenuWithoutButton = (e) => {
+    const target = e.target.className;
+    if (target === "nav-wrapper") {
+      isActive();
+    }
+  };
+
   if (menuActive) {
     return (
-      <div className="nav-wrapper">
+      <div className="nav-wrapper" onClick={closeMenuWithoutButton}>
         <div className="nav-bar">
           <div className="nav-links">
             <Link exact to="/book" className="link">
               Book
             </Link>
-            <Link exact to="/pricing" className="link">
-              Pricing
+            <Link exact to="/" className="link">
+              Pricing <span className="coming-soon">coming soon</span>
             </Link>
-            <Link exact to="/blog" className="link">
-              Blog
+            <Link exact to="/" className="link">
+              Blog <span className="coming-soon">coming soon</span>
             </Link>
-            <Link exact to="/about" className="link">
-              About Us
+            <Link exact to="/" className="link">
+              About Us <span className="coming-soon">coming soon</span>
             </Link>
-            <Link exact to="/contact" className="link">
-              Contact
+            <Link exact to="/" className="link">
+              Contact <span className="coming-soon">coming soon</span>
             </Link>
           </div>
         </div>
-        <div className="nav-scrim"></div>
+        {/* <div className="nav-scrim" onClick={isActive}></div> */}
       </div>
     );
   }
