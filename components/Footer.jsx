@@ -9,7 +9,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="footer-wrapper">
+    <footer id="footer" className="footer-wrapper">
       <div className="subscribe-wrapper">
         <h4>Ready to Get Started?</h4>
         <Link className="subscribe-link">

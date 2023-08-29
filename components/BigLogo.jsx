@@ -1,6 +1,6 @@
-function HeaderLogo() {
+function BigLogo() {
   return (
-    <svg id="logo" data-name="Layer 2" viewBox="0 0 114.14 48.07">
+    <svg id="big-logo" data-name="Layer 2" viewBox="0 0 114.14 48.07">
       <defs>
         <style>{".cls-2{fill:#044418}"}</style>
       </defs>
@@ -37,4 +37,4 @@ function HeaderLogo() {
   );
 }
 
-export default HeaderLogo;
+export default BigLogo;

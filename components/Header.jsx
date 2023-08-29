@@ -2,7 +2,7 @@ import Menu from "./Menu";
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Logo from "./Logo";
+import HeaderLogo from "./Logo";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -15,7 +15,7 @@ function Header() {
     <>
       <header className="header-wrapper">
         <Link exact to="/">
-          <Logo />
+          <HeaderLogo />
         </Link>
         <Menu isActive={isActive} menuActive={menuActive} />
       </header>
