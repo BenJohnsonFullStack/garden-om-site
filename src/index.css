@@ -46,10 +46,13 @@ h4 {
 address {
   text-align: center;
   font-style: normal;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
 }
 
 .coming-soon-wrapper {
   padding: 2em 0;
+  margin-top: 2em;
 }
 
 .bold {
@@ -69,8 +72,10 @@ address {
 
 .menu-icon {
   color: #044418;
-  margin-right: 1.5em;
+  margin-right: 0.5em;
   cursor: pointer;
+  padding: 1em;
+  padding-top: 0.5em;
 }
 
 .book-button:focus {
