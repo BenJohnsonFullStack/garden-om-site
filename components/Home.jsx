@@ -1,4 +1,5 @@
 import BigLogo from "./BigLogo";
+import BookButton from "./BookButton";
 import Footer from "./Footer";
 import Header from "./Header";
 import { HashLink as Link } from "react-router-hash-link";
@@ -17,6 +18,7 @@ function Home() {
             In the meantime, please use the button below to book your{" "}
             <span className="bold">FREE</span> first class.
           </p>
+          <BookButton />
           <p>
             Be sure to{" "}
             <Link to="#footer" className="inline-link">
