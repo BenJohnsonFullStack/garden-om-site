@@ -1,4 +1,5 @@
 import Home from "../components/Home";
+import Book from "../components/Book";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -6,11 +7,12 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        {/* <Route exact path="/book" element={<Book />} />
-        <Route exact path="/pricing" element={<Pricing />} />
+
+        <Route exact path="/book" element={<Book />} />
+        {/* <Route exact path="/pricing" element={<Pricing />} />
         <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/about" element={<About />} />
-        <Route exact path="/contact" element={<Contact />} /> */}
+        <Route exact path="/contact" element={<Contact />} />  */}
       </Routes>
     </>
   );

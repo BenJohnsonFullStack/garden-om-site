@@ -30,8 +30,7 @@ function Home() {
           </p>
         </div>
         <address>
-          1420 Wynnton Rd <br />
-          Columbus, GA 31906 <br />
+          <h3>Contact Us</h3>
           <Link to="tel:2295880313">229.588.0313</Link> <br />
           <Link to="email:contact@gardenomyoga.com">
             contact@gardenomyoga.com
