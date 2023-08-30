@@ -15,25 +15,28 @@ function Home() {
           <p>
             We are currently working on bringing you a wonderful web experience.
             In the meantime, please use the button below to book your{" "}
-            <span>FREE</span> first class.
+            <span className="bold">FREE</span> first class.
           </p>
           <p>
             Be sure to{" "}
-            <Link to="#footer">
-              <span>FOLLOW US</span>
+            <Link to="#footer" className="inline-link">
+              <span className="bold">Follow Us</span>
             </Link>{" "}
             on our socials and{" "}
-            <Link to="#footer">
-              <span>SUBSCRIBE</span>
+            <Link to="#footer" className="inline-link">
+              <span className="bold">Subscribe</span>
             </Link>{" "}
             to our newsletter for updates.
           </p>
         </div>
         <address>
           <h3>Contact Us</h3>
-          <Link to="tel:2295880313">229.588.0313</Link> <br />
-          <Link to="email:contact@gardenomyoga.com">
-            contact@gardenomyoga.com
+          <Link to="tel:2295880313" className="inline-link">
+            <span className="bold">229.588.0313</span>
+          </Link>{" "}
+          <br />
+          <Link to="email:contact@gardenomyoga.com" className="inline-link">
+            <span className="bold">contact@gardenomyoga.com</span>
           </Link>
         </address>
       </div>

@@ -20,8 +20,15 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
   line-height: 1.1;
+  text-align: center;
+  min-width: 95%;
+}
+
+h2,
+h3 {
+  text-align: center;
 }
 
 h4 {
@@ -29,6 +36,33 @@ h4 {
   color: #dbb72a;
   font-size: 1.2rem;
   margin-bottom: 0;
+}
+
+.coming-soon-text {
+  margin-left: 1em;
+  width: min(100% - 2rem, 75ch);
+}
+
+address {
+  text-align: center;
+  font-style: normal;
+}
+
+.coming-soon-wrapper {
+  padding: 2em 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.inline-link {
+  text-decoration: none;
+  color: black;
+}
+
+.inline-link:visited {
+  color: black;
 }
 
 #logo {
