@@ -7,8 +7,18 @@ import HeaderLogo from "./Logo";
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
 
+  const scrollLock = () => {
+    const bodyStyle = document.body.style;
+    if (!menuActive) {
+      bodyStyle.overflowY = "hidden";
+    } else {
+      bodyStyle.overflowY = "auto";
+    }
+  };
+
   const isActive = () => {
     setMenuActive(!menuActive);
+    scrollLock();
   };
 
   return (
