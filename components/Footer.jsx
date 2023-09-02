@@ -1,18 +1,36 @@
 import { Link } from "react-router-dom";
 import AbellaLogo from "./AbellaLogo";
+import SubscribeModal from "./SubscribeModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import {
   faSquareFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 function Footer() {
+  const [modalActive, setModalActive] = useState("false");
+
+  const isModalActive = () => {
+    setModalActive(!modalActive);
+    scrollLock();
+  };
+
+  const scrollLock = () => {
+    const bodyStyle = document.body.style;
+    if (!modalActive) {
+      bodyStyle.overflowY = "hidden";
+    } else {
+      bodyStyle.overflowY = "auto";
+    }
+  };
+
   return (
     <footer id="footer" className="footer-wrapper">
       <div className="subscribe-wrapper">
         <h4>Ready to Get Started?</h4>
-        <Link className="subscribe-link">
+        <Link className="subscribe-link" onClick={isModalActive}>
           <p className="subscribe">Subscribe to our newsletter</p>
           <FontAwesomeIcon
             icon={faChevronRight}
@@ -20,6 +38,7 @@ function Footer() {
           />
         </Link>
       </div>
+      <SubscribeModal isModalActive={isModalActive} modalActive={modalActive} />
       <div className="social-wrapper">
         <h4>Follow Us on Social Media</h4>
         <div className="social-links">

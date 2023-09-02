@@ -13,7 +13,7 @@ function Nav(props) {
 
   if (menuActive) {
     return (
-      <div className="nav-wrapper" onClick={closeMenuWithoutButton}>
+      <nav className="nav-wrapper" onClick={closeMenuWithoutButton}>
         <div className="nav-bar">
           <div className="nav-links">
             <Link exact to="/book" className="link">
@@ -33,8 +33,7 @@ function Nav(props) {
             </Link>
           </div>
         </div>
-        {/* <div className="nav-scrim" onClick={isActive}></div> */}
-      </div>
+      </nav>
     );
   }
 }
