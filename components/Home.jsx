@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { HashLink as Link } from "react-router-hash-link";
 
-function Home() {
+const Home = () => {
   return (
     <div className="home-wrapper">
       <Header />
@@ -45,6 +45,6 @@ function Home() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Home;

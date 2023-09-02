@@ -1,4 +1,4 @@
-function HeaderLogo() {
+const HeaderLogo = () => {
   return (
     <svg id="logo" data-name="Layer 2" viewBox="0 0 114.14 48.07">
       <defs>
@@ -35,6 +35,6 @@ function HeaderLogo() {
       </g>
     </svg>
   );
-}
+};
 
 export default HeaderLogo;

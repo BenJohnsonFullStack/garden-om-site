@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function BookButton() {
+const BookButton = () => {
   return (
     <div className="button-container">
       <Link to="/book">
@@ -8,6 +8,6 @@ function BookButton() {
       </Link>
     </div>
   );
-}
+};
 
 export default BookButton;

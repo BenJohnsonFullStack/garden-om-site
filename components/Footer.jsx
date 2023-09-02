@@ -7,23 +7,22 @@ import {
   faSquareFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function Footer() {
+const Footer = () => {
   const [modalActive, setModalActive] = useState("false");
 
-  const isModalActive = () => {
-    setModalActive(!modalActive);
-    scrollLock();
-  };
-
-  const scrollLock = () => {
+  useEffect(() => {
     const bodyStyle = document.body.style;
-    if (!modalActive) {
+    if (modalActive) {
       bodyStyle.overflowY = "hidden";
     } else {
       bodyStyle.overflowY = "auto";
     }
+  }, [modalActive]);
+
+  const isModalActive = () => {
+    setModalActive(!modalActive);
   };
 
   return (
@@ -72,6 +71,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

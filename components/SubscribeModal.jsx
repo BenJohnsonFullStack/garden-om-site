@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-function SubscribeModal(props) {
+const SubscribeModal = (props) => {
   const { modalActive, isModalActive } = props;
 
-  if (modalActive === true) {
+  if (modalActive) {
     return <>Hello World</>;
   }
-}
+};
 
 export default SubscribeModal;

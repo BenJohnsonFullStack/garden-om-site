@@ -1,24 +1,23 @@
 import Menu from "./Menu";
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeaderLogo from "./Logo";
 
-function Header() {
+const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
 
-  const scrollLock = () => {
+  useEffect(() => {
     const bodyStyle = document.body.style;
-    if (!menuActive) {
+    if (menuActive) {
       bodyStyle.overflowY = "hidden";
     } else {
       bodyStyle.overflowY = "auto";
     }
-  };
+  }, [menuActive]);
 
   const isActive = () => {
     setMenuActive(!menuActive);
-    scrollLock();
   };
 
   return (
@@ -32,6 +31,6 @@ function Header() {
       <Nav menuActive={menuActive} isActive={isActive} />
     </>
   );
-}
+};
 
 export default Header;

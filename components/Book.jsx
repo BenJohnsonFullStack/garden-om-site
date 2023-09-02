@@ -2,7 +2,7 @@ import CalendlyApp from "./CalendlyApp";
 import Footer from "./Footer";
 import Header from "./Header";
 
-function Book() {
+const Book = () => {
   return (
     <>
       <Header />
@@ -10,6 +10,6 @@ function Book() {
       <Footer />
     </>
   );
-}
+};
 
 export default Book;

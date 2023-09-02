@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Nav(props) {
+const Nav = (props) => {
   // eslint-disable-next-line react/prop-types
   const { menuActive, isActive } = props;
 
@@ -36,6 +36,6 @@ function Nav(props) {
       </nav>
     );
   }
-}
+};
 
 export default Nav;

@@ -1,4 +1,4 @@
-function AbellaLogo() {
+const AbellaLogo = () => {
   return (
     <svg className="abella" data-name="Layer 2" viewBox="0 0 87.34 19.43">
       <defs>
@@ -53,6 +53,6 @@ function AbellaLogo() {
       </g>
     </svg>
   );
-}
+};
 
 export default AbellaLogo;

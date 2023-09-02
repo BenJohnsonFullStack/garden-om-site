@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
-function Menu(props) {
+const Menu = (props) => {
   const { isActive, menuActive } = props;
 
   return (
@@ -15,6 +15,6 @@ function Menu(props) {
       />
     </>
   );
-}
+};
 
 export default Menu;

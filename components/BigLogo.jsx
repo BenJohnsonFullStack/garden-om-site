@@ -1,4 +1,4 @@
-function BigLogo() {
+const BigLogo = () => {
   return (
     <svg id="big-logo" data-name="Layer 2" viewBox="0 0 114.14 48.07">
       <defs>
@@ -35,6 +35,6 @@ function BigLogo() {
       </g>
     </svg>
   );
-}
+};
 
 export default BigLogo;
