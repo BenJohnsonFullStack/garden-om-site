@@ -10,7 +10,7 @@ import {
 import { useEffect, useState } from "react";
 
 const Footer = () => {
-  const [modalActive, setModalActive] = useState("false");
+  const [modalActive, setModalActive] = useState(false);
 
   useEffect(() => {
     const bodyStyle = document.body.style;
@@ -29,13 +29,13 @@ const Footer = () => {
     <footer id="footer" className="footer-wrapper">
       <div className="subscribe-wrapper">
         <h4>Ready to Get Started?</h4>
-        <Link className="subscribe-link" onClick={isModalActive}>
+        <div className="subscribe-link" onClick={isModalActive}>
           <p className="subscribe">Subscribe to our newsletter</p>
           <FontAwesomeIcon
             icon={faChevronRight}
             className="subscribe chevron"
           />
-        </Link>
+        </div>
       </div>
       <SubscribeModal isModalActive={isModalActive} modalActive={modalActive} />
       <div className="social-wrapper">

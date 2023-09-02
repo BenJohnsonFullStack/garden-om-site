@@ -226,6 +226,7 @@ address {
 
 .subscribe-wrapper {
   padding-top: 0.2em;
+  cursor: pointer;
 }
 
 .footer-wrapper {
