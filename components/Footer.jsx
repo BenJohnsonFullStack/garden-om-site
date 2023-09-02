@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import AbellaLogo from "./AbellaLogo";
 import SubscribeModal from "./SubscribeModal";
@@ -7,29 +8,19 @@ import {
   faSquareFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
 
-const Footer = () => {
-  const [modalActive, setModalActive] = useState(false);
+const Footer = (props) => {
+  const { setModalActive } = props;
 
-  useEffect(() => {
-    const bodyStyle = document.body.style;
-    if (modalActive) {
-      bodyStyle.overflowY = "hidden";
-    } else {
-      bodyStyle.overflowY = "auto";
-    }
-  }, [modalActive]);
-
-  const isModalActive = () => {
-    setModalActive(!modalActive);
+  const showModal = () => {
+    setModalActive(true);
   };
 
   return (
     <footer id="footer" className="footer-wrapper">
       <div className="subscribe-wrapper">
         <h4>Ready to Get Started?</h4>
-        <div className="subscribe-link" onClick={isModalActive}>
+        <div className="subscribe-link" onClick={showModal}>
           <p className="subscribe">Subscribe to our newsletter</p>
           <FontAwesomeIcon
             icon={faChevronRight}
@@ -37,7 +28,6 @@ const Footer = () => {
           />
         </div>
       </div>
-      <SubscribeModal isModalActive={isModalActive} modalActive={modalActive} />
       <div className="social-wrapper">
         <h4>Follow Us on Social Media</h4>
         <div className="social-links">
