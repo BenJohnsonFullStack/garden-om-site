@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const SubscribeForm = ({ onChange, formValues }) => {
   return (
-    <form className="form-wrapper" method="dialog">
+    <form className="form-wrapper">
       <label htmlFor="firstName" className="form-field">
         First Name
         <input
@@ -51,7 +51,11 @@ const SubscribeForm = ({ onChange, formValues }) => {
           value={formValues.dob}
         />
       </label>
-      <input className="primary-button" type="submit" value={"Submit"} />
+      <input
+        className="primary-button subscribe-button"
+        type="submit"
+        value={"Submit"}
+      />
     </form>
   );
 };

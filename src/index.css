@@ -232,3 +232,69 @@ address {
 .footer-wrapper {
   margin-top: 0.5em;
 }
+
+.modal-wrapper {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 1000vh;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.modal {
+  background-color: #edece8;
+  border-radius: 10px;
+  width: min(100% - 4em, 35em);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subscribe-close {
+  color: #044418;
+  cursor: pointer;
+  margin-left: calc(100% - 1em);
+}
+
+.modal-content {
+  padding: 1em 2em;
+}
+
+.modal-content h3 {
+  color: #071902;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  font-weight: bold;
+  color: #071902;
+}
+
+.input-box {
+  padding: 0.5em 0.3em;
+  border: 2px solid #044418;
+  background-color: #edece8;
+}
+
+.primary-button {
+  border: 2px solid #044418;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1rem;
+  color: #044418;
+  background-color: #dbb72a;
+}
+
+.subscribe-button {
+  margin: 1em 0;
+}

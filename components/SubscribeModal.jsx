@@ -23,13 +23,15 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
     return (
       <div className="modal-wrapper">
         <div className="modal">
-          <h4>Get the latest updates.</h4>
-          <FontAwesomeIcon
-            icon={faX}
-            onClick={isModalActive}
-            className="menu-icon"
-          />
-          <SubscribeForm onChange={onChange} formValues={formValues} />
+          <div className="modal-content">
+            <FontAwesomeIcon
+              icon={faX}
+              onClick={isModalActive}
+              className="subscribe-close"
+            />
+            <h3>Get the latest updates.</h3>
+            <SubscribeForm onChange={onChange} formValues={formValues} />
+          </div>
         </div>
       </div>
     );
