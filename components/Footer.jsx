@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import AbellaLogo from "./AbellaLogo";
-import SubscribeModal from "./SubscribeModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import {
