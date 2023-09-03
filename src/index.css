@@ -41,6 +41,7 @@ h4 {
 .coming-soon-text {
   margin-left: 1em;
   width: min(100% - 2rem, 75ch);
+  margin: 0 auto;
 }
 
 address {
