@@ -5,6 +5,7 @@ const SubscribeForm = ({ onChange, formValues }) => {
       <label htmlFor="firstName" className="form-field">
         First Name
         <input
+          className="input-box"
           id="firstName"
           placeholder="Jane"
           type="text"
@@ -13,9 +14,10 @@ const SubscribeForm = ({ onChange, formValues }) => {
           value={formValues.firstName}
         />
       </label>
-      <label htmlFor="lastName">
+      <label htmlFor="lastName" className="form-field">
         Last Name
         <input
+          className="input-box"
           id="lastName"
           placeholder="Doe"
           type="text"
@@ -24,9 +26,10 @@ const SubscribeForm = ({ onChange, formValues }) => {
           value={formValues.lastName}
         />
       </label>
-      <label htmlFor="email">
+      <label htmlFor="email" className="form-field">
         Email
         <input
+          className="input-box"
           id="email"
           label="Email"
           placeholder="janedoe@email.com"
@@ -36,9 +39,10 @@ const SubscribeForm = ({ onChange, formValues }) => {
           value={formValues.email}
         />
       </label>
-      <label htmlFor="dob">
+      <label htmlFor="dob" className="form-field">
         Date of Birth
         <input
+          className="input-box"
           id="dob"
           label="Date of Birth"
           type="date"
@@ -47,7 +51,7 @@ const SubscribeForm = ({ onChange, formValues }) => {
           value={formValues.dob}
         />
       </label>
-      <button className="subscribe-submit">Submit</button>
+      <button className="primary-button">Submit</button>
     </form>
   );
 };
