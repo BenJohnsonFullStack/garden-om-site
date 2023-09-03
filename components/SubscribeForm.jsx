@@ -51,7 +51,7 @@ const SubscribeForm = ({ onChange, formValues }) => {
           value={formValues.dob}
         />
       </label>
-      <button className="primary-button">Submit</button>
+      <input className="primary-button" type="submit" value={"Submit"} />
     </form>
   );
 };
