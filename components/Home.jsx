@@ -1,27 +1,11 @@
+/* eslint-disable react/prop-types */
 import BigLogo from "./BigLogo";
 import BookButton from "./BookButton";
 import Footer from "./Footer";
 import Header from "./Header";
 import { HashLink as Link } from "react-router-hash-link";
-import { useState, useEffect } from "react";
-import SubscribeModal from "./SubscribeModal";
 
-const Home = () => {
-  const [modalActive, setModalActive] = useState(false);
-
-  useEffect(() => {
-    const bodyStyle = document.body.style;
-    if (modalActive) {
-      bodyStyle.overflowY = "hidden";
-    } else {
-      bodyStyle.overflowY = "auto";
-    }
-  }, [modalActive]);
-
-  const isModalActive = () => {
-    setModalActive(!modalActive);
-  };
-
+const Home = ({ isModalActive, setModalActive, modalActive }) => {
   return (
     <div className="home-wrapper">
       <Header />
@@ -59,8 +43,12 @@ const Home = () => {
           </Link>
         </address>
       </div>
-      <SubscribeModal isModalActive={isModalActive} modalActive={modalActive} />
-      <Footer setModalActive={setModalActive} />
+
+      <Footer
+        setModalActive={setModalActive}
+        isModalActive={isModalActive}
+        modalActive={modalActive}
+      />
     </div>
   );
 };

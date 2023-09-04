@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import AbellaLogo from "./AbellaLogo";
+import SubscribeModal from "./SubscribeModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -11,7 +12,7 @@ import terms from "../files/garden-om-terms.pdf";
 import privacy from "../files/garden-om-privacy.pdf";
 
 const Footer = (props) => {
-  const { setModalActive } = props;
+  const { setModalActive, isModalActive, modalActive } = props;
 
   const showModal = () => {
     setModalActive(true);
@@ -28,6 +29,10 @@ const Footer = (props) => {
             className="subscribe chevron"
           />
         </div>
+        <SubscribeModal
+          isModalActive={isModalActive}
+          modalActive={modalActive}
+        />
       </div>
       <div className="social-wrapper">
         <h4>Follow Us on Social Media</h4>
