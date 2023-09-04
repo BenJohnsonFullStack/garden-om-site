@@ -1,5 +1,7 @@
 import Home from "../components/Home";
 import Book from "../components/Book";
+import Terms from "../components/Terms";
+import Privacy from "../components/Privacy";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />  */}
+        <Route exact path="/terms" element={<Terms />} />
+        <Route exact path="/privacy" element={<Privacy />} />
       </Routes>
     </>
   );

@@ -42,8 +42,12 @@ const Footer = (props) => {
         </div>
       </div>
       <div className="terms-wrapper">
-        <Link className="terms">Terms of Use</Link>
-        <Link className="terms">Privacy Policy</Link>
+        <Link to="/terms" target="_blank" className="terms">
+          Terms of Use
+        </Link>
+        <Link to="privacy" target="_blank" className="terms">
+          Privacy Policy
+        </Link>
       </div>
       <div className="copyright">
         <p>&copy; 2023 Garden Om</p>
