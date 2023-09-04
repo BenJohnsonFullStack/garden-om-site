@@ -8,6 +8,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import terms from "../files/garden-om-terms.pdf";
+import privacy from "../files/garden-om-privacy.pdf";
 
 const Footer = (props) => {
   const { setModalActive } = props;
