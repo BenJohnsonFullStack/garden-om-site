@@ -19,16 +19,28 @@ const Nav = (props) => {
             <Link exact to="/book" className="link">
               Book
             </Link>
-            <Link exact to="/" className="link">
+            <Link
+              // exact to="/"
+              className="link"
+            >
               Pricing <span className="coming-soon">coming soon</span>
             </Link>
-            <Link exact to="/" className="link">
+            <Link
+              // exact to="/"
+              className="link"
+            >
               Blog <span className="coming-soon">coming soon</span>
             </Link>
-            <Link exact to="/" className="link">
+            <Link
+              // exact to="/"
+              className="link"
+            >
               About Us <span className="coming-soon">coming soon</span>
             </Link>
-            <Link exact to="/" className="link">
+            <Link
+              // exact to="/"
+              className="link"
+            >
               Contact <span className="coming-soon">coming soon</span>
             </Link>
           </div>
