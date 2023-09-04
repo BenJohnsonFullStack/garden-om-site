@@ -7,6 +7,7 @@ import {
   faSquareFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import terms from "../files/garden-om-terms.pdf";
 
 const Footer = (props) => {
   const { setModalActive } = props;
@@ -42,10 +43,10 @@ const Footer = (props) => {
         </div>
       </div>
       <div className="terms-wrapper">
-        <Link to="/terms" target="_blank" className="terms">
+        <Link to={terms} target="_blank" className="terms">
           Terms of Use
         </Link>
-        <Link to="privacy" target="_blank" className="terms">
+        <Link to={privacy} target="_blank" className="terms">
           Privacy Policy
         </Link>
       </div>
