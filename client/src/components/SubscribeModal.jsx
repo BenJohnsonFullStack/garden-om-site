@@ -6,6 +6,9 @@ import axios from "axios";
 
 /* eslint-disable react/prop-types */
 const SubscribeModal = ({ modalActive, isModalActive }) => {
+  const [subscribeMessage, setSubscribeMessage] = useState("");
+  const [promoMessage, setPromoMessage] = useState("");
+
   const initialValues = {
     first_name: "",
     last_name: "",
@@ -18,7 +21,6 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
   const onChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
   };
 
   const submit = (e) => {
@@ -32,7 +34,8 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
     axios
       .post("/api/subscribers", newSubscriber)
       .then((res) => {
-        console.log(res);
+        setSubscribeMessage(res.data.message);
+        setPromoMessage(res.data.promo);
         setFormValues(initialValues);
       })
       .catch((err) => {
@@ -55,6 +58,8 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
               onChange={onChange}
               formValues={formValues}
               submit={submit}
+              subscribeMessage={subscribeMessage}
+              promoMessage={promoMessage}
             />
           </div>
         </div>

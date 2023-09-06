@@ -1,7 +1,13 @@
 import axios from "axios";
 
 /* eslint-disable react/prop-types */
-const SubscribeForm = ({ onChange, formValues, submit }) => {
+const SubscribeForm = ({
+  onChange,
+  formValues,
+  submit,
+  subscribeMessage,
+  promoMessage,
+}) => {
   return (
     <form className="form-wrapper" onSubmit={submit}>
       <label htmlFor="first_name" className="form-field">
@@ -54,6 +60,8 @@ const SubscribeForm = ({ onChange, formValues, submit }) => {
         />
       </label>
       <button className="primary-button subscribe-button">Submit</button>
+      <p className="success">{subscribeMessage}</p>
+      <p className="promo">{promoMessage}</p>
     </form>
   );
 };
