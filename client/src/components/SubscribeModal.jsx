@@ -23,11 +23,18 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
     setFormValues({ ...formValues, [name]: value });
   };
 
+  const upperCaseFirstLetter = (word) => {
+    const casedWord = word.charAt(0).toUpperCase() + word.slice(1);
+    return casedWord;
+  };
+
   const submit = (e) => {
     e.preventDefault();
+    const first = upperCaseFirstLetter(formValues.first_name);
+    const last = upperCaseFirstLetter(formValues.last_name);
     const newSubscriber = {
-      first_name: formValues.first_name.trim(),
-      last_name: formValues.last_name.trim(),
+      first_name: first.trim(),
+      last_name: last.trim(),
       email: formValues.email.trim(),
       dob: formValues.dob,
     };
