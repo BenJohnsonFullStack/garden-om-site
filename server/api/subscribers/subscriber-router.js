@@ -12,7 +12,6 @@ router.get("/", (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const newSubscriber = req.body;
-    console.log(newSubscriber);
     await Subscriber.addSubscriber(newSubscriber);
     res.status(201).json({
       message: `Thanks for subscribing, ${newSubscriber.first_name}!`,
