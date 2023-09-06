@@ -2,12 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import SubscribeForm from "./SubscribeForm";
+import axios from "axios";
 
 /* eslint-disable react/prop-types */
 const SubscribeModal = ({ modalActive, isModalActive }) => {
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     email: "",
     dob: "",
   };
@@ -17,6 +18,25 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
   const onChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    const newSubscriber = {
+      first_name: formValues.first_name.trim(),
+      last_name: formValues.last_name.trim(),
+      email: formValues.email.trim(),
+      dob: formValues.dob,
+    };
+    axios
+      .post("/api/subscribers", newSubscriber)
+      .then((res) => {
+        console.log(res);
+        setFormValues(initialValues);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   if (modalActive) {
@@ -30,7 +50,11 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
               className="subscribe-close"
             />
             <h3>Get the latest updates.</h3>
-            <SubscribeForm onChange={onChange} formValues={formValues} />
+            <SubscribeForm
+              onChange={onChange}
+              formValues={formValues}
+              submit={submit}
+            />
           </div>
         </div>
       </div>

@@ -1,29 +1,31 @@
+import axios from "axios";
+
 /* eslint-disable react/prop-types */
-const SubscribeForm = ({ onChange, formValues }) => {
+const SubscribeForm = ({ onChange, formValues, submit }) => {
   return (
-    <form className="form-wrapper">
-      <label htmlFor="firstName" className="form-field">
+    <form className="form-wrapper" onSubmit={submit}>
+      <label htmlFor="first_name" className="form-field">
         First Name
         <input
           className="input-box"
-          id="firstName"
+          id="first_name"
           placeholder="Jane"
           type="text"
-          name="firstName"
+          name="first_name"
           onChange={onChange}
-          value={formValues.firstName}
+          value={formValues.first_name}
         />
       </label>
-      <label htmlFor="lastName" className="form-field">
+      <label htmlFor="last_name" className="form-field">
         Last Name
         <input
           className="input-box"
-          id="lastName"
+          id="last_name"
           placeholder="Doe"
           type="text"
-          name="lastName"
+          name="last_name"
           onChange={onChange}
-          value={formValues.lastName}
+          value={formValues.last_name}
         />
       </label>
       <label htmlFor="email" className="form-field">
@@ -51,11 +53,7 @@ const SubscribeForm = ({ onChange, formValues }) => {
           value={formValues.dob}
         />
       </label>
-      <input
-        className="primary-button subscribe-button"
-        type="submit"
-        value={"Submit"}
-      />
+      <button className="primary-button subscribe-button">Submit</button>
     </form>
   );
 };

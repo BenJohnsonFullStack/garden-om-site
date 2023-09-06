@@ -227,6 +227,9 @@ address {
 
 .subscribe-wrapper {
   padding-top: 0.2em;
+}
+
+.subscribe-link {
   cursor: pointer;
 }
 
@@ -298,4 +301,5 @@ address {
 
 .subscribe-button {
   margin: 1em 0;
+  cursor: pointer;
 }

@@ -29,11 +29,8 @@ const Footer = (props) => {
             className="subscribe chevron"
           />
         </div>
-        <SubscribeModal
-          isModalActive={isModalActive}
-          modalActive={modalActive}
-        />
       </div>
+      <SubscribeModal isModalActive={isModalActive} modalActive={modalActive} />
       <div className="social-wrapper">
         <h4>Follow Us on Social Media</h4>
         <div className="social-links">
