@@ -7,7 +7,7 @@ exports.up = function (knex) {
     tbl.increments();
     tbl.string("first_name", 128).notNullable();
     tbl.string("last_name", 128).notNullable();
-    tbl.string("email").notNullable();
+    tbl.string("email").notNullable().unique();
     tbl.string("birthday");
   });
 };
