@@ -3,9 +3,10 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import SubscribeForm from "./SubscribeForm";
 import axios from "axios";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 /* eslint-disable react/prop-types */
-const SubscribeModal = ({ modalActive, isModalActive, setModalActive }) => {
+const SubscribeModal = ({ modalActive, isModalActive }) => {
   const [subscribeMessage, setSubscribeMessage] = useState("");
   const [promoMessage, setPromoMessage] = useState("");
   const [status, setStatus] = useState("idle");
@@ -17,7 +18,10 @@ const SubscribeModal = ({ modalActive, isModalActive, setModalActive }) => {
     dob: "",
   };
 
-  const [formValues, setFormValues] = useState(initialValues);
+  const [formValues, setFormValues] = useLocalStorage(
+    "subscribe",
+    initialValues
+  );
 
   const onChange = (e) => {
     const { name, value } = e.target;
