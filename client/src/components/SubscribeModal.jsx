@@ -9,6 +9,7 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 const SubscribeModal = ({ modalActive, isModalActive }) => {
   const [subscribeMessage, setSubscribeMessage] = useState("");
   const [promoMessage, setPromoMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [status, setStatus] = useState("idle");
 
   const initialValues = {
@@ -55,8 +56,8 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
         setStatus("success");
       })
       .catch((err) => {
-        console.error(err);
         setStatus("error");
+        setErrorMessage(err.response.data.message);
       });
   };
 
@@ -78,6 +79,7 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
               subscribeMessage={subscribeMessage}
               promoMessage={promoMessage}
               status={status}
+              errorMessage={errorMessage}
             />
           </div>
         </div>

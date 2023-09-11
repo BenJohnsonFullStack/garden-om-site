@@ -6,6 +6,7 @@ const SubscribeForm = ({
   subscribeMessage,
   promoMessage,
   status,
+  errorMessage,
 }) => {
   return (
     <form className="form-wrapper" onSubmit={submit}>
@@ -68,6 +69,7 @@ const SubscribeForm = ({
           <p className="promo">{promoMessage}</p>
         </div>
       )}
+      {status === "error" && <p className="error">{errorMessage}</p>}
     </form>
   );
 };

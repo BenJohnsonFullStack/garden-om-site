@@ -1,5 +1,6 @@
 const express = require("express");
 const Subscriber = require("./subscriber-model");
+const { validateSubscriber } = require("./subscriber-middleware");
 
 const router = express.Router();
 
@@ -9,7 +10,7 @@ router.get("/", (req, res, next) => {
 });
 //////////// endpoint test //////////////////
 
-router.post("/", async (req, res, next) => {
+router.post("/", validateSubscriber, async (req, res, next) => {
   try {
     const newSubscriber = req.body;
     await Subscriber.addSubscriber(newSubscriber);
