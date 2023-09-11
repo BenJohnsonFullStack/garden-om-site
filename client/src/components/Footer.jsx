@@ -30,7 +30,11 @@ const Footer = (props) => {
           />
         </div>
       </div>
-      <SubscribeModal isModalActive={isModalActive} modalActive={modalActive} />
+      <SubscribeModal
+        isModalActive={isModalActive}
+        modalActive={modalActive}
+        setModalActive={setModalActive}
+      />
       <div className="social-wrapper">
         <h4>Follow Us on Social Media</h4>
         <div className="social-links">

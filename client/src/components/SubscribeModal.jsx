@@ -5,9 +5,10 @@ import SubscribeForm from "./SubscribeForm";
 import axios from "axios";
 
 /* eslint-disable react/prop-types */
-const SubscribeModal = ({ modalActive, isModalActive }) => {
+const SubscribeModal = ({ modalActive, isModalActive, setModalActive }) => {
   const [subscribeMessage, setSubscribeMessage] = useState("");
   const [promoMessage, setPromoMessage] = useState("");
+  const [status, setStatus] = useState("idle");
 
   const initialValues = {
     first_name: "",
@@ -30,6 +31,7 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
 
   const submit = (e) => {
     e.preventDefault();
+    setStatus("loading");
     const first = upperCaseFirstLetter(formValues.first_name);
     const last = upperCaseFirstLetter(formValues.last_name);
     const newSubscriber = {
@@ -45,8 +47,12 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
         setPromoMessage(res.data.promo);
         setFormValues(initialValues);
       })
+      .then(() => {
+        setStatus("success");
+      })
       .catch((err) => {
         console.error(err);
+        setStatus("error");
       });
   };
 
@@ -67,6 +73,7 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
               submit={submit}
               subscribeMessage={subscribeMessage}
               promoMessage={promoMessage}
+              status={status}
             />
           </div>
         </div>

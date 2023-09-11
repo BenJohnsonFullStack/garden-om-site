@@ -1,5 +1,3 @@
-import axios from "axios";
-
 /* eslint-disable react/prop-types */
 const SubscribeForm = ({
   onChange,
@@ -7,6 +5,7 @@ const SubscribeForm = ({
   submit,
   subscribeMessage,
   promoMessage,
+  status,
 }) => {
   return (
     <form className="form-wrapper" onSubmit={submit}>
@@ -59,9 +58,16 @@ const SubscribeForm = ({
           value={formValues.dob}
         />
       </label>
-      <button className="primary-button subscribe-button">Submit</button>
-      <p className="success">{subscribeMessage}</p>
-      <p className="promo">{promoMessage}</p>
+      {status === "idle" && (
+        <button className="primary-button subscribe-button">Submit</button>
+      )}
+      {status === "loading" && <p>Loading...</p>}
+      {status === "success" && (
+        <div>
+          <p className="success">{subscribeMessage}</p>
+          <p className="promo">{promoMessage}</p>
+        </div>
+      )}
     </form>
   );
 };
