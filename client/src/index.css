@@ -173,6 +173,16 @@ address {
   color: #edece8;
 }
 
+.group-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #071902;
+  font-weight: bold;
+}
+
 .subscribe-link,
 .scroll-to-top {
   justify-content: center;

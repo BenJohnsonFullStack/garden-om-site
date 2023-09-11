@@ -4,6 +4,8 @@ import BookButton from "./BookButton";
 import Footer from "./Footer";
 import Header from "./Header";
 import { HashLink as Link } from "react-router-hash-link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Home = ({ isModalActive, setModalActive, modalActive }) => {
   return (
@@ -16,10 +18,17 @@ const Home = ({ isModalActive, setModalActive, modalActive }) => {
         <div className="coming-soon-text">
           <p>
             We are currently working on bringing you a wonderful web experience.
-            In the meantime, please use the button below to book your{" "}
-            <span className="bold">FREE</span> first class.
+            In the meantime, please use the button below to book your first
+            class!
           </p>
           <BookButton />
+          <Link to="/groups" className="group-link">
+            <p>Have a group of 5 or more?</p>
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className="subscribe chevron"
+            />
+          </Link>
           <p>
             Be sure to{" "}
             <Link to="#footer" className="inline-link">

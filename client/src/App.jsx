@@ -2,7 +2,7 @@ import Home from "./components/Home";
 import Book from "./components/Book";
 import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import GroupBooking from "./components/GroupBooking";
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
@@ -46,6 +46,19 @@ function App() {
             />
           }
         />
+
+        <Route
+          exact
+          path="/groups"
+          element={
+            <GroupBooking
+              isModalActive={isModalActive}
+              modalActive={modalActive}
+              setModalActive={setModalActive}
+            />
+          }
+        />
+
         {/* <Route exact path="/pricing" element={<Pricing />} />
         <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/about" element={<About />} />
