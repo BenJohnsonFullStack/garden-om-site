@@ -24,9 +24,9 @@ router.post("/", validateSubscriber, async (req, res, next) => {
 });
 
 router.use((err, req, res, next) => {
-  res.status(err.status || 500).json({
-    message: err.message,
-    stack: err.stack,
+  res.json({
+    status: err.status || 500,
+    message: "Oh no! Something went wrong. Please try again!",
   });
 });
 
