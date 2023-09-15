@@ -3,13 +3,18 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+
+const DB = process.env.DB;
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+
 module.exports = {
   development: {
     client: "postgresql",
     connection: {
-      database: "garden_om",
-      user: "postgres",
-      password: "theballetschool",
+      database: DB,
+      user: DB_USER,
+      password: DB_PASSWORD,
     },
     pool: {
       min: 2,
