@@ -4,12 +4,6 @@ const { validateSubscriber } = require("./subscriber-middleware");
 
 const router = express.Router();
 
-//////////// endpoint test //////////////////
-router.get("/", (req, res, next) => {
-  res.json("Hello subscribers");
-});
-//////////// endpoint test //////////////////
-
 router.post("/", validateSubscriber, async (req, res, next) => {
   try {
     const newSubscriber = req.body;
@@ -23,6 +17,7 @@ router.post("/", validateSubscriber, async (req, res, next) => {
   }
 });
 
+// eslint-disable-next-line no-unused-vars
 router.use((err, req, res, next) => {
   res.json({
     status: err.status || 500,
