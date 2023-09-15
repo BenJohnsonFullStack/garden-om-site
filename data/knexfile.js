@@ -4,24 +4,32 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
-const DB = process.env.DB;
-const DB_USER = process.env.DB_USER;
-const DB_PASSWORD = process.env.DB_PASSWORD;
+const devConfig = {
+  user: process.env.PG_USER,
+  password: process.env.PG_PASSWORD,
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  port: process.env.PG_PORT,
+};
+
+const proConfig = {
+  connectionString: process.env.DATABASE_URL, // heroku postrgeSQL
+};
 
 module.exports = {
   development: {
-    client: "postgresql",
-    connection: {
-      database: DB,
-      user: DB_USER,
-      password: DB_PASSWORD,
-    },
-    pool: {
-      min: 2,
-      max: 10,
-    },
+    client: "pg",
+    connection: devConfig,
     migrations: {
-      tableName: "knex_migrations",
+      directory: "./migrations",
+    },
+  },
+
+  production: {
+    client: "pg",
+    connection: proConfig,
+    migrations: {
+      directory: "./migrations",
     },
   },
 };
