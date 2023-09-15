@@ -9,8 +9,8 @@
   },
   "scripts": {
     "server": "nodemon index.js",
-    "start": "cd client serve dist",
-    "heroku-postbuild": "npm run build"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "Lobi Software Studio",
