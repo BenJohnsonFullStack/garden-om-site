@@ -4,6 +4,10 @@ const { validateSubscriber } = require("./subscriber-middleware");
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.json("Hello from subscribers");
+});
+
 router.post("/", validateSubscriber, async (req, res, next) => {
   try {
     const newSubscriber = req.body;

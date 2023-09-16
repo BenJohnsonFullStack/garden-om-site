@@ -31,5 +31,9 @@ module.exports = {
     migrations: {
       directory: "./migrations",
     },
+    pool: {
+      min: 0,
+      max: 10,
+    },
   },
 };
