@@ -8,11 +8,10 @@ const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
 
   useEffect(() => {
-    const bodyStyle = document.body.style;
     if (menuActive) {
-      bodyStyle.overflowY = "hidden";
+      document.body.classList.add("lock-scroll");
     } else {
-      bodyStyle.overflowY = "auto";
+      document.body.classList.remove("lock-scroll");
     }
   }, [menuActive]);
 

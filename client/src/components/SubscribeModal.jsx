@@ -6,7 +6,7 @@ import axios from "axios";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 /* eslint-disable react/prop-types */
-const SubscribeModal = ({ modalActive, isModalActive }) => {
+const SubscribeModal = ({ modalActive, toggleModalActive }) => {
   const [subscribeMessage, setSubscribeMessage] = useState("");
   const [promoMessage, setPromoMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -68,7 +68,7 @@ const SubscribeModal = ({ modalActive, isModalActive }) => {
           <div className="modal-content">
             <FontAwesomeIcon
               icon={faX}
-              onClick={isModalActive}
+              onClick={toggleModalActive}
               className="subscribe-close"
             />
             <h3>Get the latest updates.</h3>

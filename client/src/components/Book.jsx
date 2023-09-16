@@ -3,13 +3,13 @@ import CalendlyApp from "./CalendlyApp";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Book = ({ isModalActive, setModalActive, modalActive }) => {
+const Book = ({ toggleModalActive, setModalActive, modalActive }) => {
   return (
     <>
       <Header />
       <CalendlyApp />
       <Footer
-        isModalActive={isModalActive}
+        toggleModalActive={toggleModalActive}
         setModalActive={setModalActive}
         modalActive={modalActive}
       />

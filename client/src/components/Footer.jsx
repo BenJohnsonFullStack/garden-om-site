@@ -12,7 +12,7 @@ import terms from "../assets/files/garden-om-terms.pdf";
 import privacy from "../assets/files/garden-om-privacy.pdf";
 
 const Footer = (props) => {
-  const { setModalActive, isModalActive, modalActive } = props;
+  const { setModalActive, toggleModalActive, modalActive } = props;
 
   const showModal = () => {
     setModalActive(true);
@@ -31,7 +31,7 @@ const Footer = (props) => {
         </div>
       </div>
       <SubscribeModal
-        isModalActive={isModalActive}
+        toggleModalActive={toggleModalActive}
         modalActive={modalActive}
         setModalActive={setModalActive}
       />

@@ -4,10 +4,8 @@ import BookButton from "./BookButton";
 import Footer from "./Footer";
 import Header from "./Header";
 import { HashLink as Link } from "react-router-hash-link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-const Home = ({ isModalActive, setModalActive, modalActive }) => {
+const Home = ({ toggleModalActive, setModalActive, modalActive }) => {
   return (
     <div className="home-wrapper">
       <Header />
@@ -22,13 +20,6 @@ const Home = ({ isModalActive, setModalActive, modalActive }) => {
             class!
           </p>
           <BookButton />
-          <Link to="/groups" className="group-link">
-            <p>Have a group of 5 or more?</p>
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              className="subscribe chevron"
-            />
-          </Link>
           <p>
             Be sure to{" "}
             <Link to="#footer" className="inline-link">
@@ -55,7 +46,7 @@ const Home = ({ isModalActive, setModalActive, modalActive }) => {
 
       <Footer
         setModalActive={setModalActive}
-        isModalActive={isModalActive}
+        toggleModalActive={toggleModalActive}
         modalActive={modalActive}
       />
     </div>

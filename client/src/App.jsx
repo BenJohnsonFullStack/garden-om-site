@@ -5,18 +5,20 @@ import { useState, useEffect } from "react";
 import GroupBooking from "./components/GroupBooking";
 
 function App() {
+  // State to manage the modal window
   const [modalActive, setModalActive] = useState(false);
 
+  // Effect to update the body overflow style based on the modalActive state
   useEffect(() => {
-    const bodyStyle = document.body.style;
     if (modalActive) {
-      bodyStyle.overflowY = "hidden";
+      document.body.classList.add("lock-scroll");
     } else {
-      bodyStyle.overflowY = "auto";
+      document.body.classList.remove("lock-scroll");
     }
   }, [modalActive]);
 
-  const isModalActive = () => {
+  // Function to toggle the modalActive state
+  const toggleModalActive = () => {
     setModalActive(!modalActive);
   };
 
@@ -24,11 +26,10 @@ function App() {
     <>
       <Routes>
         <Route
-          exact
           path="/"
           element={
             <Home
-              isModalActive={isModalActive}
+              toggleModalActive={toggleModalActive}
               modalActive={modalActive}
               setModalActive={setModalActive}
             />
@@ -40,7 +41,7 @@ function App() {
           path="/book"
           element={
             <Book
-              isModalActive={isModalActive}
+              toggleModalActive={toggleModalActive}
               modalActive={modalActive}
               setModalActive={setModalActive}
             />
@@ -52,7 +53,7 @@ function App() {
           path="/groups"
           element={
             <GroupBooking
-              isModalActive={isModalActive}
+              toggleModalActive={toggleModalActive}
               modalActive={modalActive}
               setModalActive={setModalActive}
             />

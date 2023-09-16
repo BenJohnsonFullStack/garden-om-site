@@ -317,3 +317,7 @@ address {
 .error {
   color: red;
 }
+
+.lock-scroll {
+  overflow-y: hidden;
+}
