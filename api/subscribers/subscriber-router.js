@@ -4,8 +4,9 @@ const { validateSubscriber } = require("./subscriber-middleware");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json("Hello from subscribers");
+router.get("/", async (req, res) => {
+  const subscribers = await Subscriber.getSubscribers();
+  res.json(subscribers);
 });
 
 router.post("/", validateSubscriber, async (req, res, next) => {
