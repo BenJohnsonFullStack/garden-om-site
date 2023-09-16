@@ -48,18 +48,6 @@ function App() {
           }
         />
 
-        <Route
-          exact
-          path="/groups"
-          element={
-            <GroupBooking
-              toggleModalActive={toggleModalActive}
-              modalActive={modalActive}
-              setModalActive={setModalActive}
-            />
-          }
-        />
-
         {/* <Route exact path="/pricing" element={<Pricing />} />
         <Route exact path="/blog" element={<Blog />} />
         <Route exact path="/about" element={<About />} />
