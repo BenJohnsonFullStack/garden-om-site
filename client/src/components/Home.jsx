@@ -43,7 +43,7 @@ const Home = ({ isModalActive, setModalActive, modalActive }) => {
         </div>
         <address>
           <h3>Contact Us</h3>
-          <Link to="tel:2295880313" className="inline-link">
+          <Link to="" className="inline-link">
             <span className="bold"></span>
           </Link>{" "}
           <br />
