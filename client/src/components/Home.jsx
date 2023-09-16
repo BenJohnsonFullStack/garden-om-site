@@ -44,7 +44,7 @@ const Home = ({ isModalActive, setModalActive, modalActive }) => {
         <address>
           <h3>Contact Us</h3>
           <Link to="tel:2295880313" className="inline-link">
-            <span className="bold">229.588.0313</span>
+            <span className="bold"></span>
           </Link>{" "}
           <br />
           <Link to="email:contact@gardenomyoga.com" className="inline-link">
