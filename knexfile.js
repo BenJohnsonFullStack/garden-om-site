@@ -3,6 +3,11 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+const pg = require("pg");
+
+if (process.env.DATABASE_URL) {
+  pg.defaults.ssl = { rejectUnauthorized: false };
+}
 
 const devConfig = {
   user: process.env.PG_USER,
@@ -12,24 +17,20 @@ const devConfig = {
   port: process.env.PG_PORT,
 };
 
-const proConfig = {
-  connectionString: process.env.DATABASE_URL, // heroku postrgeSQL
-};
-
 module.exports = {
   development: {
     client: "pg",
     connection: devConfig,
     migrations: {
-      directory: "./migrations",
+      directory: "./data/migrations",
     },
   },
 
   production: {
     client: "pg",
-    connection: proConfig,
+    connection: process.env.DATABASE_URL,
     migrations: {
-      directory: "./migrations",
+      directory: "./data/migrations",
     },
     pool: {
       min: 0,
