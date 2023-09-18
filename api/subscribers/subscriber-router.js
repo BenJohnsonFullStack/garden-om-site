@@ -4,10 +4,11 @@ const { validateSubscriber } = require("./subscriber-middleware");
 
 const router = express.Router();
 
-router.get("/", async (req, res, next) => {
+router.get("/", (req, res, next) => {
   try {
-    const subscribers = await Subscriber.getSubscribers();
-    res.json(subscribers);
+    // const subscribers = await Subscriber.getSubscribers();
+    // res.json(subscribers);
+    throw new Error("test");
   } catch (err) {
     next(err);
   }
@@ -24,14 +25,6 @@ router.post("/", validateSubscriber, async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-});
-
-// eslint-disable-next-line no-unused-vars
-router.use((err, req, res, next) => {
-  res.json({
-    status: err.status || 500,
-    message: "Oh no! Something went wrong. Please try again!",
-  });
 });
 
 module.exports = router;

@@ -15,6 +15,13 @@ if (process.env.NODE_ENV === "production") {
   server.use(express.static(path.join(__dirname, "client/dist")));
 }
 
+// eslint-disable-next-line no-unused-vars
+server.use((err, req, res, next) => {
+  res.status(err.status || 500).json({
+    message: "Oh no! Something went wrong. Please try again!",
+  });
+});
+
 const PORT = process.env.PORT || 9000;
 
 server.listen(PORT, () => {
