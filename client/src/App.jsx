@@ -2,6 +2,7 @@ import Home from "./components/Home";
 import Book from "./components/Book";
 import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
+import image from "./assets/images/honeycomb-logo-trans-01.png";
 
 function App() {
   // State to manage the modal window
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+      <img src={image}></img>
       <Routes>
         <Route
           path="/"
