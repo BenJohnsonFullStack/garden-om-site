@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import CalendlyApp from "./CalendlyApp";
+import BookingWidget from "./BookingWidget";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -7,7 +7,7 @@ const Book = ({ toggleModalActive, setModalActive, modalActive }) => {
   return (
     <>
       <Header />
-      <CalendlyApp />
+      <BookingWidget />
       <Footer
         toggleModalActive={toggleModalActive}
         setModalActive={setModalActive}
