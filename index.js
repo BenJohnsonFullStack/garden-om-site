@@ -11,7 +11,7 @@ server.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        "script-src": ["'self'", "https://simplybook.me"],
+        "script-src": ["'self'", "https://simplybook.me/v2/widget/widget.js"],
       },
     },
   })
