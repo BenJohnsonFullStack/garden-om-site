@@ -9,11 +9,7 @@ const server = express();
 
 server.use(
   helmet({
-    contentSecurityPolicy: {
-      directives: {
-        "script-src": ["'self'", "https://simplybook.me/v2/widget/widget.js"],
-      },
-    },
+    contentSecurityPolicy: false,
   })
 );
 server.use(express.json());
