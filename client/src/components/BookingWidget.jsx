@@ -6,7 +6,7 @@ function BookingWidget() {
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;
-    script.src = "https://widget.simplybook.me/v2/widget/widget.js";
+    script.src = "//widget.simplybook.me/v2/widget/widget.js";
     script.onload = () => {
       new SimplybookWidget({
         widget_type: "iframe",
