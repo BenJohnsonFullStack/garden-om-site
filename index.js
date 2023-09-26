@@ -7,7 +7,15 @@ const subscriberRouter = require("./api/subscribers/subscriber-router");
 
 const server = express();
 
-server.use(helmet());
+server.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        "script-src": ["'self'", "https://simplybook.me"],
+      },
+    },
+  })
+);
 server.use(express.json());
 server.use("/api/subscribers", subscriberRouter);
 
