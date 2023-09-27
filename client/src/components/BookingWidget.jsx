@@ -8,7 +8,6 @@ function BookingWidget() {
     script.async = true;
     script.src = "//widget.simplybook.me/v2/widget/widget.js";
     script.onload = () => {
-      // eslint-disable-next-line no-undef
       new SimplybookWidget({
         widget_type: "iframe",
         url: "https://gardenomyoga.simplybook.me",
