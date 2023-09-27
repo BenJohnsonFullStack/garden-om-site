@@ -2,26 +2,12 @@ require("dotenv").config();
 const express = require("express");
 const helmet = require("helmet");
 const path = require("path");
-const crypto = require("crypto");
-
-const nonce = crypto.randomBytes(16).toString("base64");
 
 const subscriberRouter = require("./api/subscribers/subscriber-router");
 
 const server = express();
 
-server.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        scriptSrc: [
-          "//widget.simplybook.me/v2/widget/widget.js",
-          `'nonce-${nonce}'`,
-        ],
-      },
-    },
-  })
-);
+server.use(helmet());
 server.use(express.json());
 server.use("/api/subscribers", subscriberRouter);
 
