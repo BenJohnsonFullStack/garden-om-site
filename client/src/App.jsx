@@ -35,7 +35,7 @@ function App() {
           }
         />
 
-        <Route
+        {/* <Route
           path="/book"
           element={
             <Book
@@ -44,7 +44,7 @@ function App() {
               setModalActive={setModalActive}
             />
           }
-        />
+        /> */}
 
         {/* <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />

@@ -16,7 +16,7 @@ const Nav = (props) => {
       <nav className="nav-wrapper" onClick={closeMenuWithoutButton}>
         <div className="nav-bar">
           <div className="nav-links">
-            <Link to="/book" className="link">
+            <Link to="https://gardenomyoga.simplybook.me" className="link">
               Book
             </Link>
             <Link

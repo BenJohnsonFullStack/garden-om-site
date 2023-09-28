@@ -7,6 +7,7 @@ function BookingWidget() {
     const script = document.createElement("script");
     script.async = true;
     script.src = "//widget.simplybook.me/v2/widget/widget.js";
+    // add nonce with crypto -- script.nonce = "<nonce>"
     script.onload = () => {
       new SimplybookWidget({
         widget_type: "iframe",
