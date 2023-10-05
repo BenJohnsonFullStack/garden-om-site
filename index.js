@@ -7,7 +7,15 @@ const subscriberRouter = require("./api/subscribers/subscriber-router");
 
 const server = express();
 
-server.use(helmet());
+server.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        "default-src": ["self", "https://api.emailjs.com/api/v1.0/email/send"],
+      },
+    },
+  })
+);
 server.use(express.json());
 server.use("/api/subscribers", subscriberRouter);
 
