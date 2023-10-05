@@ -54,6 +54,7 @@ address {
 .coming-soon-wrapper {
   padding: 2em 0;
   margin-top: 2em;
+  border: 1px solid red;
 }
 
 .bold {
@@ -77,6 +78,7 @@ address {
   cursor: pointer;
   padding: 1em;
   padding-top: 0.5em;
+  font-size: 1.6em;
 }
 
 .book-button:focus {
@@ -105,7 +107,7 @@ address {
 }
 
 #logo {
-  width: 5rem;
+  width: 7rem;
   margin-left: 1.5em;
 }
 
@@ -203,7 +205,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  max-width: 50%;
+  width: 15em;
   margin: 0 auto;
   padding-top: 1.5em;
 }
@@ -320,4 +322,11 @@ address {
 
 .lock-scroll {
   overflow-y: hidden;
+}
+
+#big-logo {
+  border: 1px solid red;
+  display: block;
+  margin: 0 auto;
+  width: min(100% - 1rem, 540px);
 }
