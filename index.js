@@ -11,7 +11,10 @@ server.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        "default-src": ["self", "https://api.emailjs.com/api/v1.0/email/send"],
+        "default-src": [
+          "'self'",
+          "https://api.emailjs.com/api/v1.0/email/send",
+        ],
       },
     },
   })
