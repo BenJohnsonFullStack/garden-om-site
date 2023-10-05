@@ -46,7 +46,6 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
       email: formValues.email.trim(),
       dob: formValues.dob,
     };
-    const key = import.meta.env.VITE_EMAIL_KEY;
 
     axios
       .post("/api/subscribers", newSubscriber)
@@ -66,7 +65,7 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
             to_email: "contact@gardenomyoga.com",
             message: `You have a new subscriber: ${newSubscriber.first_name} ${newSubscriber.last_name} at ${newSubscriber.email}`,
           },
-          key
+          "9XZ5Lzamj_P6uvMA1"
         );
         setStatus("success");
       })
