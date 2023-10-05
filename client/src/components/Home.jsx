@@ -20,7 +20,7 @@ const Home = ({ toggleModalActive, setModalActive, modalActive }) => {
             class!
           </p>
           <BookButton />
-          <p>
+          <p className="coming-soon-reminder">
             Be sure to{" "}
             <Link to="#footer" className="inline-link">
               <span className="bold">Follow Us</span>

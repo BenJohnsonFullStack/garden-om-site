@@ -54,7 +54,10 @@ address {
 .coming-soon-wrapper {
   padding: 2em 0;
   margin-top: 2em;
-  border: 1px solid red;
+}
+
+.coming-soon-reminder {
+  text-align: center;
 }
 
 .bold {
