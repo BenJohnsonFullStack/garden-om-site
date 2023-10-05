@@ -328,7 +328,6 @@ address {
 }
 
 #big-logo {
-  border: 1px solid red;
   display: block;
   margin: 0 auto;
   width: min(100% - 1rem, 540px);
