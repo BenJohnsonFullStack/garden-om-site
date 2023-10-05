@@ -38,6 +38,7 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
   const submit = (e) => {
     e.preventDefault();
     setStatus("loading");
+
     const first = upperCaseFirstLetter(formValues.first_name);
     const last = upperCaseFirstLetter(formValues.last_name);
     const newSubscriber = {
@@ -47,6 +48,19 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
       dob: formValues.dob,
     };
 
+    emailjs.send(
+      "service_euuh26g",
+      "template_d1v8y8f",
+      {
+        from_name: newSubscriber.first_name + " " + newSubscriber.last_name,
+        to_name: "Garden Om Yoga",
+        from_email: "contact@gardenomyoga.com",
+        to_email: "contact@gardenomyoga.com",
+        message: `You have a new subscriber: ${newSubscriber.first_name} ${newSubscriber.last_name} at ${newSubscriber.email}`,
+      },
+      "9XZ5Lzamj_P6uvMA1"
+    );
+
     axios
       .post("/api/subscribers", newSubscriber)
       .then((res) => {
@@ -55,18 +69,6 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
         setFormValues(initialValues);
       })
       .then(() => {
-        emailjs.send(
-          "service_euuh26g",
-          "template_d1v8y8f",
-          {
-            from_name: newSubscriber.first_name + " " + newSubscriber.last_name,
-            to_name: "Garden Om Yoga",
-            from_email: "contact@gardenomyoga.com",
-            to_email: "contact@gardenomyoga.com",
-            message: `You have a new subscriber: ${newSubscriber.first_name} ${newSubscriber.last_name} at ${newSubscriber.email}`,
-          },
-          "9XZ5Lzamj_P6uvMA1"
-        );
         setStatus("success");
       })
       .catch((err) => {
