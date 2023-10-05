@@ -4,6 +4,7 @@ import { useState } from "react";
 import SubscribeForm from "./SubscribeForm";
 import axios from "axios";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import emailjs from "@emailjs/browser";
 
 /* eslint-disable react/prop-types */
 const SubscribeModal = ({ modalActive, toggleModalActive }) => {
@@ -45,6 +46,8 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
       email: formValues.email.trim(),
       dob: formValues.dob,
     };
+    const key = import.meta.env.VITE_EMAIL_KEY;
+
     axios
       .post("/api/subscribers", newSubscriber)
       .then((res) => {
@@ -53,6 +56,18 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
         setFormValues(initialValues);
       })
       .then(() => {
+        emailjs.send(
+          "service_euuh26g",
+          "template_d1v8y8f",
+          {
+            from_name: newSubscriber.first_name + " " + newSubscriber.last_name,
+            to_name: "Garden Om Yoga",
+            from_email: "contact@gardenomyoga.com",
+            to_email: "contact@gardenomyoga.com",
+            message: `You have a new subscriber: ${newSubscriber.first_name} ${newSubscriber.last_name} at ${newSubscriber.email}`,
+          },
+          key
+        );
         setStatus("success");
       })
       .catch((err) => {
@@ -80,6 +95,7 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
               promoMessage={promoMessage}
               status={status}
               errorMessage={errorMessage}
+              toggleModalActive={toggleModalActive}
             />
           </div>
         </div>

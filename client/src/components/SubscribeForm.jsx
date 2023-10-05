@@ -7,6 +7,7 @@ const SubscribeForm = ({
   promoMessage,
   status,
   errorMessage,
+  toggleModalActive,
 }) => {
   return (
     <form className="form-wrapper" onSubmit={submit}>
@@ -60,13 +61,21 @@ const SubscribeForm = ({
         />
       </label>
       {status === "idle" && (
-        <button className="primary-button subscribe-button">Submit</button>
+        <button className="primary-button subscribe-button" type="submit">
+          Submit
+        </button>
       )}
-      {status === "loading" && <p>Loading...</p>}
+      {status === "loading" && <p>Sending...</p>}
       {status === "success" && (
         <div>
           <p className="success">{subscribeMessage}</p>
           <p className="promo">{promoMessage}</p>
+          <button
+            className="primary-button subscribe-button"
+            onClick={toggleModalActive}
+          >
+            Close
+          </button>
         </div>
       )}
       {status === "error" && <p className="error">{errorMessage}</p>}
