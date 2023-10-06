@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          component={
+          element={
             <Home
               toggleModalActive={toggleModalActive}
               modalActive={modalActive}
@@ -37,7 +37,7 @@ function App() {
 
         <Route
           path="book"
-          component={
+          element={
             <Book
               toggleModalActive={toggleModalActive}
               modalActive={modalActive}
