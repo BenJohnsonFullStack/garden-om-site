@@ -65,7 +65,7 @@ const SubscribeModal = ({ modalActive, toggleModalActive }) => {
           {
             from_name: newSubscriber.first_name + " " + newSubscriber.last_name,
             to_name: "Garden Om Yoga",
-            from_email: "contact@gardenomyoga.com",
+            from_email: `${newSubscriber.email}`,
             to_email: "contact@gardenomyoga.com",
             message: `You have a new subscriber: ${newSubscriber.first_name} ${newSubscriber.last_name}, ${newSubscriber.email}`,
           },
