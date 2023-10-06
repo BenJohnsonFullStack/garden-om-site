@@ -2,22 +2,13 @@
 
 import Footer from "./Footer";
 import Header from "./Header";
+import BookingWidget from "./BookingWidget";
 
 const Book = ({ toggleModalActive, setModalActive, modalActive }) => {
-  const iframeStyle = {
-    width: "100%",
-    height: "300vh",
-    border: "none",
-  };
-
   return (
     <>
       <Header />
-      <iframe
-        src="https://gardenomyoga.simplybook.me"
-        title="Schedule Your Yoga Session with Garden Om"
-        style={iframeStyle}
-      ></iframe>
+      <BookingWidget />
       <Footer
         toggleModalActive={toggleModalActive}
         setModalActive={setModalActive}
