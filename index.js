@@ -14,7 +14,7 @@ server.use(
         "default-src": [
           "'self'",
           "https://api.emailjs.com/api/v1.0/email/send",
-          "https://www.gardenomyoga.com",
+          "https://gardenomyoga.simplybook.me/",
         ],
       },
     },
