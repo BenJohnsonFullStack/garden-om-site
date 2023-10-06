@@ -13,7 +13,6 @@ server.use(
       directives: {
         "default-src": [
           "'self'",
-          "https://www.gardenomyoga.com",
           "https://api.emailjs.com/api/v1.0/email/send",
           "https://gardenomyoga.simplybook.me/",
         ],
@@ -33,9 +32,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 server.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "client/dist/assets", "client/dist/index.html")
-  );
+  res.sendFile(path.join(__dirname, "client/dist", "index.html"));
 });
 
 // eslint-disable-next-line no-unused-vars
