@@ -15,12 +15,15 @@ server.use(
           "'self'",
           "https://api.emailjs.com/api/v1.0/email/send",
           "https://gardenomyoga.simplybook.me/",
-          "https://www.gardenomyoga.com/favicon.ico",
         ],
       },
     },
+    cacheControl: {
+      noStore: true,
+    },
   })
 );
+
 server.use(express.json());
 server.use("/api/subscribers", subscriberRouter);
 
