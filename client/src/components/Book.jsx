@@ -15,7 +15,7 @@ const Book = ({ toggleModalActive, setModalActive, modalActive }) => {
       <Header />
       <iframe
         src="https://gardenomyoga.simplybook.me"
-        title="Embedded Website"
+        title="Schedule Your Yoga Session with Garden Om"
         style={iframeStyle}
       ></iframe>
       <Footer
