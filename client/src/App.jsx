@@ -26,7 +26,8 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={
+          exact
+          component={
             <Home
               toggleModalActive={toggleModalActive}
               modalActive={modalActive}
@@ -37,7 +38,7 @@ function App() {
 
         <Route
           path="/book"
-          element={
+          component={
             <Book
               toggleModalActive={toggleModalActive}
               modalActive={modalActive}
