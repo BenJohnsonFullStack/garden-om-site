@@ -32,7 +32,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 server.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(
+    path.join(__dirname, "client/dist/assets", "client/dist/index.html")
+  );
 });
 
 // eslint-disable-next-line no-unused-vars
