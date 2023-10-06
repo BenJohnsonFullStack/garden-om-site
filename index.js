@@ -31,6 +31,10 @@ if (process.env.NODE_ENV === "production") {
   server.use(express.static(path.join(__dirname, "client/dist")));
 }
 
+server.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 // eslint-disable-next-line no-unused-vars
 server.use((err, req, res, next) => {
   res.status(err.status || 500).json({
