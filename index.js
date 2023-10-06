@@ -13,6 +13,7 @@ server.use(
       directives: {
         "default-src": [
           "'self'",
+          "https://www.gardenomyoga.com",
           "https://api.emailjs.com/api/v1.0/email/send",
           "https://gardenomyoga.simplybook.me/",
         ],
